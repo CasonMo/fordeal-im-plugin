@@ -181,7 +181,7 @@ var flag = false;
 function ship_to(val) {
     var dataUrl = val.getAttribute("data-url");
     console.log("dataUrl:" + dataUrl);
-    var lis = $('.dropdown-btn-menu li');
+    var lis = $('.tool-item-list .tool-item');
     flag = false;
     for (var i = 0; i < lis.length; i++) {
         if (lis[i].innerText.indexOf('Shopping guide center') > -1) {
