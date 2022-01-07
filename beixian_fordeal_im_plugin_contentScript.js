@@ -191,9 +191,9 @@ function ship_to(val) {
         }
     }
     if (!flag) {
-        var links = $('.mod-tool-inner-links .link-item span');
+        var links = $('.mod-tool-inner-links .link-item');
         for (var i = 0; i < links.length; i++) {
-            if (links[i].innerText.indexOf('Shopping guide center') > -1) {
+            if (links[i].innerHTML.indexOf('Shopping guide center') > -1) {
                 links[i].click();
                 flag = true;
             }
