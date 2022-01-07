@@ -193,6 +193,7 @@ function ship_to(val) {
     if (!flag) {
         var links = $('.mod-tool-inner-links .link-item');
         for (var i = 0; i < links.length; i++) {
+            console.log(links[i].innerHTML)
             if (links[i].innerHTML.indexOf('Shopping guide center') > -1) {
                 links[i].click();
                 flag = true;
