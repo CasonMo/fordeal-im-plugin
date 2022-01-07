@@ -182,7 +182,7 @@ function ship_to(val) {
     var dataUrl = val.getAttribute("data-url");
     console.log("dataUrl:" + dataUrl);
     var lis = $('.tool-item-list .tool-item');
-
+    $('.pane-splitter-button').click()
     flag = false;
     for (var i = 0; i < lis.length; i++) {
         if (lis[i].innerText.indexOf('Shopping guide center') > -1) {
@@ -195,7 +195,6 @@ function ship_to(val) {
         var links = $('.mod-tool-inner-links .link-item');
         console.log(links)
         for (var i = 0; i < links.length; i++) {
-            console.log(links[i].innerHTML)
             if (links[i].innerHTML.indexOf('Shopping guide center') > -1) {
                 links[i].click();
                 flag = true;
