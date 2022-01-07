@@ -184,7 +184,9 @@ function ship_to(val) {
     var lis = $('.tool-item-list .tool-item');
     var pane_splitter_button = $('.pane-splitter-button');
     for (var i = 0; i < pane_splitter_button.length; i++) {
-        pane_splitter_button[i].click()
+        if (pane_splitter_button[i].find('i').hasClass('el-icon-d-arrow-left')) {
+            pane_splitter_button[i].click();
+        }
     }
     flag = false;
     for (var i = 0; i < lis.length; i++) {
