@@ -191,7 +191,7 @@ function ship_to(val) {
         }
     }
     for (var i = 0; i < links.length; i++) {
-        if (links[i].innerText.indexOf('Shopping guide center') > -1) {
+        if (links[i].find('span').innerText.indexOf('Shopping guide center') > -1) {
             links[i].click();
             flag = true;
         }
