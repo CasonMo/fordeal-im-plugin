@@ -190,8 +190,10 @@ function ship_to(val) {
             flag = true;
         }
     }
+    console.log(flag)
     if (!flag) {
         var links = $('.mod-tool-inner-links .link-item');
+        console.log(links)
         for (var i = 0; i < links.length; i++) {
             console.log(links[i].innerHTML)
             if (links[i].innerHTML.indexOf('Shopping guide center') > -1) {
