@@ -183,9 +183,7 @@ function ship_to(val) {
     console.log("dataUrl:" + dataUrl);
     var lis = $('.tool-item-list .tool-item');
     var pane_splitter_button = $('.pane-splitter-button');
-    console.log(pane_splitter_button)
     for (var i = 0; i < pane_splitter_button.length; i++) {
-        console.log(pane_splitter_button[i].innerHTML)
         if (pane_splitter_button[i].innerHTML.indexOf('el-icon-d-arrow-left') > -1) {
             pane_splitter_button[i].click();
         }
