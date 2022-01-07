@@ -182,7 +182,7 @@ function ship_to(val) {
     var dataUrl = val.getAttribute("data-url");
     console.log("dataUrl:" + dataUrl);
     var lis = $('.tool-item-list .tool-item');
-    var links = $('.mod-tool-inner-links .link-item');
+
     flag = false;
     for (var i = 0; i < lis.length; i++) {
         if (lis[i].innerText.indexOf('Shopping guide center') > -1) {
@@ -190,12 +190,16 @@ function ship_to(val) {
             flag = true;
         }
     }
-    for (var i = 0; i < links.length; i++) {
-        if (links[i].find('span').innerText.indexOf('Shopping guide center') > -1) {
-            links[i].click();
-            flag = true;
+    if (!flag) {
+        var links = $('.mod-tool-inner-links .link-item span');
+        for (var i = 0; i < links.length; i++) {
+            if (links[i].innerText.indexOf('Shopping guide center') > -1) {
+                links[i].click();
+                flag = true;
+            }
         }
     }
+
     if (flag == false) {
         alert("你没有访问Shopping guide center的权限哦，请联系相关人员开通")
         return;
