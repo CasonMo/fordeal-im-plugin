@@ -182,10 +182,17 @@ function ship_to(val) {
     var dataUrl = val.getAttribute("data-url");
     console.log("dataUrl:" + dataUrl);
     var lis = $('.tool-item-list .tool-item');
+    var links = $('.mod-tool-inner-links .link-item');
     flag = false;
     for (var i = 0; i < lis.length; i++) {
         if (lis[i].innerText.indexOf('Shopping guide center') > -1) {
             lis[i].click();
+            flag = true;
+        }
+    }
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].innerText.indexOf('Shopping guide center') > -1) {
+            links[i].click();
             flag = true;
         }
     }
