@@ -183,7 +183,7 @@ function ship_to(val) {
     console.log("dataUrl:" + dataUrl);
     var lis = $('.tool-item-list .tool-item');
     var pane_splitter_button = $('.pane-splitter-button');
-    for (var i = 0; i < lis.length; i++) {
+    for (var i = 0; i < pane_splitter_button.length; i++) {
         pane_splitter_button[i].click()
     }
     flag = false;
