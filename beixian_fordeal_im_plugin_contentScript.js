@@ -184,7 +184,7 @@ function ship_to(val) {
     var lis = $('.tool-item-list .tool-item');
     var pane_splitter_button = $('.pane-splitter-button');
     for (var i = 0; i < pane_splitter_button.length; i++) {
-        if (pane_splitter_button[i].find('i').hasClass('el-icon-d-arrow-left')) {
+        if (pane_splitter_button[i].innerHTML.indexOf('el-icon-d-arrow-left') > -1) {
             pane_splitter_button[i].click();
         }
     }
