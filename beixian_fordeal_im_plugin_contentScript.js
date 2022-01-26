@@ -109,7 +109,7 @@ function add_img_link(val) {
 
         sleep(50).then(() => {
             var url = $(".page-iframe").attr("src");
-            if (getParamFromUrl(url, "link") == null || getParamFromUrl(url, "link") == "") {
+            if (url.indexOf("www.fordeal.com/customer-service-helper/index.html") === -1) {
                 alert("Please click the order guide link mark first or open the shopping guide center and enter the order guide link （请先点击导单链接辅助按钮或自行打开导单后台输入导单链接）")
             } else {
                 $(".page-iframe").attr("src", "data:text/html;charset=utf-8,正在加载中，请耐心等待！！");
